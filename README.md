@@ -2,9 +2,16 @@
 
 GPTize is a Python script that helps you include only relevant files from 
 a repository (with path context) for use as input to a generative AI 
-prompt. It filters files based on .gptignore and/or .gitignore files and 
-prints the content of the relevant files in a markdown format, suitable 
-for input to AI systems like GPT.
+prompt. 
+
+By default it ignores anything in the specified path's .gitignore file.
+It walks the directory prompting the user to include or exclude each file,
+then outputs the content of the relevant files in a markdown format that
+includes the filename and path, suitable for input to LLMs.
+
+The tool saves a .gptignore in the directory it is invoked from. You can
+load the .gptignore to repeat your previous selection with updated code
+after saving changes.
 
 ## Installation
 
